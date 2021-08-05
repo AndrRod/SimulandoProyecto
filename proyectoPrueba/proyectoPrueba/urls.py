@@ -20,4 +20,5 @@ from appPrueba import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('buscar/', views.buscar),
+    path('resultado_busqueda/', views.resultado_busqueda),
 ]

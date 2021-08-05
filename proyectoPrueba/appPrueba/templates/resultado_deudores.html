@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Usted ingreso el siguiente dni: <strong>{{dni_dato}}</strong></p>
+    {% if dni %}
+        <p>Deudores encontrador: {{dni|length}}</p>
+        <ul>
+            { % for deudores in dni %}
+            <ol>Nombre: {{deudores.nombre}}, DNI: {{deudores.dni}} Registra Deudas: {{deudores.regularizo_situacion}}</ol>
+            { % endfor %}
+            
+        </ul>
+    { % else %}
+        <p>Se encuentra libre de deuda por no estar en la base de datos</p>
+    { % endif % }
+</body>
+</html>
