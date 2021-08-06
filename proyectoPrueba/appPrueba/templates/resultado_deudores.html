@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resultado busqueda</title>
 </head>
 <body>
     <p>Usted ingreso el siguiente dni: <strong>{{dni_dato}}</strong></p>
     {% if dni %}
         <p>Deudores encontrador: {{dni|length}}</p>
         <ul>
-            { % for deudores in dni %}
-            <ol>Nombre: {{deudores.nombre}}, DNI: {{deudores.dni}} Registra Deudas: {{deudores.regularizo_situacion}}</ol>
-            { % endfor %}
+            {% for deudores in dni %}
+            <li>Nombre: {{deudores.nombre}}, &nbsp; DNI: {{deudores.dni}} &nbsp; Registra Deudas: {{deudores.regularizo_situacion}}</li>
+            {% endfor %}
             
         </ul>
-    { % else %}
+    {% else %}
         <p>Se encuentra libre de deuda por no estar en la base de datos</p>
-    { % endif % }
+    {% endif %}
 </body>
 </html>
