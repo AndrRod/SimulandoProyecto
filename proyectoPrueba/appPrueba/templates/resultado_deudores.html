@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado busqueda</title>
 </head>
+    <h1>RESULTADO BUSQUEDA</h1>
 <body>
     <p>Usted ingreso el siguiente dni: <strong>{{dni_dato}}</strong></p>
     {% if dni %}
@@ -16,8 +17,9 @@
             {% endfor %}
             
         </ul>
+        <p>Para regularizar su situación, por favor acerquese a nuestro organismo</p>
     {% else %}
-        <p>Se encuentra libre de deuda por no estar en la base de datos</p>
+        <p>El DNI {{dni_dato}} se encuentra libre de deuda por no estar en la base de datos</p>
     {% endif %}
 </body>
 </html>
