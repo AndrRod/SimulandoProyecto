@@ -12,7 +12,7 @@
         <p>Deudores encontrador: {{dni|length}}</p>
         <ul>
             {% for deudores in dni %}
-            <li>Nombre: {{deudores.nombre}}, &nbsp; DNI: {{deudores.dni}} &nbsp; Registra Deudas: {{deudores.regularizo_situacion}}</li>
+            <li>Nombre: {{deudores.nombre}}, &nbsp; DNI: {{deudores.dni}} &nbsp; Registra Deudas: {% if deudores.regularizo_situacion %} NO {% else %} SI {% endif %}</li>
             {% endfor %}
             
         </ul>
